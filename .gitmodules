@@ -1,0 +1,9 @@
+[submodule "3rdparty/lvgl_cpp"]
+	path = 3rdparty/lvgl_cpp
+	url = git@github.com:lvgl/lv_binding_cpp.git
+[submodule "3rdparty/lvgl"]
+	path = 3rdparty/lvgl
+	url = git@github.com:lvgl/lvgl.git
+[submodule "3rdparty/lv_drivers"]
+	path = 3rdparty/lv_drivers
+	url = git@github.com:lvgl/lv_drivers.git
