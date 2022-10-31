@@ -7,9 +7,6 @@
  *
  * DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
  */
-
-#include <Windows.h>
-
 #include "resource.h"
 
 #if _MSC_VER >= 1200
@@ -21,43 +18,19 @@
 #pragma warning(disable:4244)
 #endif
 
-#include "lvgl/lvgl.h"
-
 #if _MSC_VER >= 1200
 // Restore compilation warnings.
 #pragma warning(pop)
 #endif
 
-#include <stdio.h>
-
-#include "lv_cpp/core/lvglpp.h"
+#include "Application.h"
 
 int main()
 {
-    lv_init();
+    auto app = sol::Application::createUnique();
 
-    auto ms = 1u;
+    if (!app || !app->init(IDI_LVGL))
+        return -1;
 
-    lvglpp::Init();
-    lvglpp::DefaultPeripheral(IDI_LVGL);
-
-#if defined(CONFIG_EXAMPLE_HELLO)
-    HelloEx::Create();
-    ms = HelloEx::ms;
-#endif
-
-#if defined(CONFIG_EXAMPLE_FLEX)
-    FlexEx::Create();
-    ms = FlexEx::ms;
-#endif
-
-    // ----------------------------------
-    // Task handler loop
-    // ----------------------------------
-    while (!lvglpp::HasQuitSignal()) {
-        lvglpp::TaskHandler(ms);
-        Sleep(1);
-    }
-
-    return 0;
+    return app->exec();
 }

@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;$(SolutionDir)..\3rdparty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\;$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;$(SolutionDir)..\3rdparty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\;$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -185,6 +185,11 @@
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTabview.cpp" />
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTextarea.cpp" />
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvWin.cpp" />
+    <ClCompile Include="..\src\Application.cpp" />
+    <ClCompile Include="..\src\ui\AuthWindow.cpp" />
+    <ClCompile Include="..\src\ui\UIManager.cpp" />
+    <ClCompile Include="..\src\ui\Window.cpp" />
+    <ClCompile Include="..\src\ui\WindowsFactory.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +234,16 @@
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTextarea.h" />
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWidgets.h" />
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWin.h" />
+    <ClInclude Include="..\src\Application.h" />
+    <ClInclude Include="..\src\ForwardDeclare.h" />
+    <ClInclude Include="..\src\macro.h" />
+    <ClInclude Include="..\src\ui\AuthWindow.h" />
+    <ClInclude Include="..\src\ui\ForwardDeclare.h" />
+    <ClInclude Include="..\src\ui\UIManager.h" />
+    <ClInclude Include="..\src\ui\Window.h" />
+    <ClInclude Include="..\src\ui\WindowsFactory.h" />
+    <ClInclude Include="..\src\utils\AbstractFactory.h" />
+    <ClInclude Include="..\src\utils\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

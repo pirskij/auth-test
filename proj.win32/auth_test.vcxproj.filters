@@ -24,6 +24,15 @@
     <Filter Include="lv_cpp\custom\drivers">
       <UniqueIdentifier>{0d754c20-d98c-4cf9-a894-c12b762ec6b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{74e42575-2795-4187-90a3-070af539550f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{3a71ed23-b3e2-4b78-82d5-58ccb2843b76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\auth">
+      <UniqueIdentifier>{79e42482-4cc2-4e14-a50a-118bc20c40d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -146,6 +155,21 @@
     </ClCompile>
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvWin.cpp">
       <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\AuthWindow.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\Window.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\WindowsFactory.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\UIManager.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Application.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +295,36 @@
     </ClInclude>
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWin.h">
       <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\Singleton.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\AuthWindow.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\AbstractFactory.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ForwardDeclare.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\Window.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\WindowsFactory.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\UIManager.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ForwardDeclare.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
