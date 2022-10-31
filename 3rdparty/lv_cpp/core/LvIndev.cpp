@@ -33,7 +33,6 @@ extern "C" {
 #include <lv_drivers/indev/libinput_drv.h>
 #endif
 
-
 namespace lvglpp {
 
 lv_img_dsc_t idev_cursor_icon;
@@ -44,7 +43,6 @@ LvInput::LvInput() :
 }
 
 LvInput::LvInput(lv_indev_drv_t *drv) {
-
 	lv_indev_drv_init(&indev_drv); /*Basic initialization*/
 
 	if (!drv) {
@@ -78,7 +76,6 @@ LvInput::LvInput(lv_indev_drv_t *drv) {
 	}
 
 	indev.reset(lv_indev_drv_register(&indev_drv));
-
 }
 
 

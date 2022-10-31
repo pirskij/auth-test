@@ -86,9 +86,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\lvgl_cpp\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;$(SolutionDir)..\3rdparty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,9 +102,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\lvgl_cpp\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\3rdparty\;$(SolutionDir)..\3rdparty\lvgl;$(SolutionDir)..\3rdparty\lvgl_drivers;$(SolutionDir)..\3rdparty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +145,90 @@
   <Import Project="LVGL.Portable.vcxitems" />
   <Import Project="LVGL.Drivers.vcxitems" />
   <ItemGroup>
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvDisplay.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\core\lvglpp.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvIndev.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvObj.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvScr.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\custom\drivers\linmice.c" />
+    <ClCompile Include="..\3rdparty\lv_cpp\custom\drivers\mouse_cursor_icon.c" />
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvAnim.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvAnimTimeline.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvStyle.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvTimer.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvAnimimg.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvArc.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBar.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBtn.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBtnmatrix.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCalendar.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCanvas.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvChart.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCheckbox.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvColorwheel.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvDropdown.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvImg.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvImgbtn.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvKeyboard.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLabel.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLed.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLine.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvList.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvMeter.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvMsgbox.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvRoller.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSlider.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSpinbox.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSpinner.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSwitch.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTable.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTabview.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTextarea.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvWin.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvDisplay.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvEvent.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\core\lvglpp.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvIndev.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvObj.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvScr.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\custom\drivers\linmice.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvAnim.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvAnimTimeline.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvStyle.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvTimer.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvAnimimg.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvArc.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBar.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBtn.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBtnmatrix.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCalendar.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCanvas.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvChart.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCheckbox.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvColorwheel.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvDropdown.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvImg.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvImgbtn.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvKeyboard.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLabel.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLed.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLine.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvList.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvMeter.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvMsgbox.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvRoller.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSlider.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSpinbox.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSpinner.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSwitch.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTable.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTabview.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTextarea.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWidgets.h" />
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

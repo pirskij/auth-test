@@ -45,8 +45,9 @@ std::unique_ptr<Class> Make(ArgsT... args){
 /* lvgl iterface functions */
 /* Initilize the lvglpp library */
 void Init();
-void Handler(unsigned int ms);
-void DefaultPeripheral();
+void DefaultPeripheral(int winIco);
+bool HasQuitSignal();
+uint32_t TaskHandler(unsigned int ms);
 
 } /* namespace lvglpp */
 

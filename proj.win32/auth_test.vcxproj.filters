@@ -6,8 +6,271 @@
     <Filter Include="src">
       <UniqueIdentifier>{b64fad2b-a456-4a5c-ae04-3d41b395e40a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lv_cpp">
+      <UniqueIdentifier>{eac7d7f0-caf3-48ca-9381-c2c532066363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_cpp\widgets">
+      <UniqueIdentifier>{52ebc6aa-64b2-4c9b-bf16-6b978bc25249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_cpp\core">
+      <UniqueIdentifier>{eb50e4bc-08a7-4da6-a466-c879062cbfc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_cpp\custom">
+      <UniqueIdentifier>{afcb9dd3-8244-480f-8dba-0516e9101529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_cpp\misc">
+      <UniqueIdentifier>{287eeb53-22bc-472c-9eae-6e69715945c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_cpp\custom\drivers">
+      <UniqueIdentifier>{0d754c20-d98c-4cf9-a894-c12b762ec6b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvDisplay.cpp">
+      <Filter>lv_cpp\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\core\lvglpp.cpp">
+      <Filter>lv_cpp\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvIndev.cpp">
+      <Filter>lv_cpp\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvObj.cpp">
+      <Filter>lv_cpp\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\core\LvScr.cpp">
+      <Filter>lv_cpp\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\custom\drivers\linmice.c">
+      <Filter>lv_cpp\custom\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\custom\drivers\mouse_cursor_icon.c">
+      <Filter>lv_cpp\custom\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvAnim.cpp">
+      <Filter>lv_cpp\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvAnimTimeline.cpp">
+      <Filter>lv_cpp\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvStyle.cpp">
+      <Filter>lv_cpp\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\misc\LvTimer.cpp">
+      <Filter>lv_cpp\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvAnimimg.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvArc.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBar.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBtn.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvBtnmatrix.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCalendar.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCanvas.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvChart.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvCheckbox.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvColorwheel.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvDropdown.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvImg.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvImgbtn.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvKeyboard.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLabel.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLed.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvLine.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvList.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvMeter.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvMsgbox.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvRoller.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSlider.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSpinbox.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSpinner.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvSwitch.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTable.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTabview.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTextarea.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvWin.cpp">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvDisplay.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvEvent.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\lvglpp.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvIndev.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvObj.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\core\LvScr.h">
+      <Filter>lv_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\custom\drivers\linmice.h">
+      <Filter>lv_cpp\custom\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvAnim.h">
+      <Filter>lv_cpp\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvAnimTimeline.h">
+      <Filter>lv_cpp\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvStyle.h">
+      <Filter>lv_cpp\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\misc\LvTimer.h">
+      <Filter>lv_cpp\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvAnimimg.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvArc.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBar.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBtn.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvBtnmatrix.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCalendar.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCanvas.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvChart.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvCheckbox.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvColorwheel.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvDropdown.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvImg.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvImgbtn.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvKeyboard.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLabel.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLed.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvLine.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvList.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvMeter.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvMsgbox.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvRoller.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSlider.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSpinbox.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSpinner.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvSwitch.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTable.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTabview.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvTextarea.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWidgets.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWin.h">
+      <Filter>lv_cpp\widgets</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
