@@ -1,6 +1,8 @@
 #pragma once
 #include <memory>
 
+#define USE_LVGL_ALLOCATOR
+
 #define DCL_PTR(X)\
 using X##SPtr = std::shared_ptr<X>;\
 using X##UPtr = std::unique_ptr<X>;\

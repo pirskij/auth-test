@@ -8,8 +8,10 @@
 #include "lv_cpp/misc/LvTimer.h"
 #include "lv_cpp/misc/LvAnim.h"
 #include "lv_cpp/misc/LvAnimTimeline.h"
+#include "utils/Memory.h"
 
 using namespace lvglpp;
+using namespace sol::utils;
 
 namespace sol::ui
 {
@@ -62,39 +64,39 @@ std::string AuthWindow::templateName()
 bool AuthWindow::init()
 {
 	/* Main container */
-	m_mainLayout = Make<LvObj>();
+	m_mainLayout = sol_make_shared<LvObj>();
 	m_mainLayout->setSize(470, 330).
 		align(LV_ALIGN_CENTER, 0, 0).
 		setFlexFlow(LV_FLEX_FLOW_COLUMN).
 		setFlexAlign(LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
 
-	m_labelsStyle = Make<LvStyle>();
+	m_labelsStyle = sol_make_shared<LvStyle>();
 	m_labelsStyle->init().setTextOpa(LV_OPA_50);
 
-	m_nameLabel = Make<LvLabel>(m_mainLayout.get());
+	m_nameLabel = sol_make_shared<LvLabel>(m_mainLayout.get());
 	m_nameLabel->setText("User name").addStyle(m_labelsStyle.get(), 0);
 
-	m_nameTextArea = Make<LvTextarea>(m_mainLayout.get());
+	m_nameTextArea = sol_make_shared<LvTextarea>(m_mainLayout.get());
 	m_nameTextArea->
 		setOneLine(true).
 		setPlaceholderText("Your name");
 		//addEventCb(ta_event_cb, LV_EVENT_ALL, kb);
 
-	m_passLabel = Make<LvLabel>(m_mainLayout.get());
+	m_passLabel = sol_make_shared<LvLabel>(m_mainLayout.get());
 	m_passLabel->setText("Password").addStyle(m_labelsStyle.get(), 0);
 
-	m_passTextArea = Make<LvTextarea>(m_mainLayout.get());
+	m_passTextArea = sol_make_shared<LvTextarea>(m_mainLayout.get());
 	m_passTextArea->
 		setOneLine(true).
 		setPasswordMode(true).
 		setPlaceholderText("Min. 8 chars.");
 	//addEventCb(ta_event_cb, LV_EVENT_ALL, kb);
 
-	m_authBtn = Make<LvBtn>(m_mainLayout.get());
+	m_authBtn = sol_make_shared<LvBtn>(m_mainLayout.get());
 	m_authBtn->setHeight(LV_SIZE_CONTENT);
 	m_authBtn->setWidth(150);
 
-	m_authBtnLabel = Make<LvLabel>(m_authBtn.get());
+	m_authBtnLabel = sol_make_shared<LvLabel>(m_authBtn.get());
 	m_authBtnLabel->setText("Auth").align(LV_ALIGN_CENTER, 0, 0);
 
 	std::cout << "Application created !!!\n";

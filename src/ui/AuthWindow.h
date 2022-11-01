@@ -17,13 +17,13 @@ namespace sol::ui
         virtual bool init() override;
 
     private:
-        lvglpp::LvPointerUnique<lvglpp::LvObj>      m_mainLayout;
-        lvglpp::LvPointerUnique<lvglpp::LvStyle>    m_labelsStyle;
-        lvglpp::LvPointerUnique<lvglpp::LvLabel>    m_nameLabel;
-        lvglpp::LvPointerUnique<lvglpp::LvTextarea> m_nameTextArea;
-        lvglpp::LvPointerUnique<lvglpp::LvLabel>    m_passLabel;
-        lvglpp::LvPointerUnique<lvglpp::LvTextarea> m_passTextArea;
-        lvglpp::LvPointerUnique<lvglpp::LvBtn>      m_authBtn;
-        lvglpp::LvPointerUnique<lvglpp::LvLabel>    m_authBtnLabel;
+        lvglpp::LvObjSPtr      m_mainLayout;
+        lvglpp::LvStyleSPtr    m_labelsStyle;
+        lvglpp::LvLabelSPtr    m_nameLabel;
+        lvglpp::LvTextareaSPtr m_nameTextArea;
+        lvglpp::LvLabelSPtr    m_passLabel;
+        lvglpp::LvTextareaSPtr m_passTextArea;
+        lvglpp::LvBtnSPtr      m_authBtn;
+        lvglpp::LvLabelSPtr    m_authBtnLabel;
     };
 }

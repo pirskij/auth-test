@@ -5,5 +5,5 @@ using namespace sol::ui;
 
 void WindowsFactory::fillCreators()
 {
-	addCreator<AuthWindow>(AuthWindow::templateName());
+	lazyAddCreator<AuthWindow>(AuthWindow::templateName());
 }

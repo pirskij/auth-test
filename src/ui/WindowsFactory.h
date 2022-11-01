@@ -5,7 +5,7 @@
 
 namespace sol::ui
 {
-	class WindowsFactory : public sol::utils::AbstractFactory<Window, Window*>
+	class WindowsFactory : public sol::utils::AbstractFactory<Window, WindowSPtr>
 	{
 	public:
 		virtual void fillCreators() override;

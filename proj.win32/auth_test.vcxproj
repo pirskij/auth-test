@@ -254,6 +254,7 @@
     <ClInclude Include="..\src\utils\AbstractFactory.h" />
     <ClInclude Include="..\src\utils\Cache.h" />
     <ClInclude Include="..\src\utils\ForwardDeclare.h" />
+    <ClInclude Include="..\src\utils\Memory.h" />
     <ClInclude Include="..\src\utils\Singleton.h" />
     <ClInclude Include="..\src\utils\Storage.h" />
   </ItemGroup>

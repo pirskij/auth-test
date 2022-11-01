@@ -11,6 +11,7 @@ namespace sol::ui
 	{
 	public:
 		UIManager();
+		~UIManager();
 
 		bool init();
 
@@ -29,7 +30,7 @@ namespace sol::ui
 		WindowSPtr getOpenedWindow(std::string_view id) const noexcept;
 
 	private:
-		WindowsFactoryUPtr m_windowsFactory;
+		WindowsFactorySPtr m_windowsFactory;
 		std::vector<WindowSPtr> m_vecWindows;
 	};
 } // namespace sol::ui

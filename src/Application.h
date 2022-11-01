@@ -15,9 +15,9 @@ namespace sol
 
 		int exec();
 
-		ui::UIManagerUPtr const& getUIManager() const noexcept { return m_uiManager; }
+		ui::UIManagerSPtr const& getUIManager() const noexcept { return m_uiManager; }
 
 	protected:
-		ui::UIManagerUPtr m_uiManager;
+		ui::UIManagerSPtr m_uiManager;
 	};
 }

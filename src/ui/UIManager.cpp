@@ -1,13 +1,18 @@
 #include "ui/UIManager.h"
 #include "ui/Window.h"
+#include "utils/Memory.h"
 
 using namespace sol::ui;
 using namespace sol::utils;
 
 UIManager::UIManager()
 {
-	m_windowsFactory = std::make_unique<WindowsFactory>();
+	m_windowsFactory = sol_make_shared<WindowsFactory>();
 	m_windowsFactory->fillCreators();
+}
+
+UIManager::~UIManager()
+{
 }
 
 bool UIManager::init()

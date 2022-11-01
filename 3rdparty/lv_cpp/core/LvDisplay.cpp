@@ -77,8 +77,8 @@ LvDisplay::LvDisplay(lv_disp_drv_t *drv, unsigned int hres, unsigned int vres) {
 #endif
 
 #if !LV_DISP_BUFFER_STATIC
-	buf1_1.reset((lv_color_t*)lv_alloc(h * 100));
-	buf1_2.reset((lv_color_t*)lv_alloc(h * 100));
+	buf1_1.reset((lv_color_t*)lv_malloc(h * 100));
+	buf1_2.reset((lv_color_t*)lv_malloc(h * 100));
 	lv_disp_draw_buf_init(disp_buf1.get(), buf1_1.get(), buf1_2.get(), w * 100);
 #else
 

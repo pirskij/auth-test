@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ForwardDeclare.h"
+#include "utils/Memory.h"
 #include <string>
 
 namespace sol::utils
@@ -11,8 +12,8 @@ namespace sol::utils
 		template<class R, class W>
 		Storage() 
 		{
-			m_reader = std::make_shared<R>();
-			m_writer = std::make_shared<W>();
+			m_reader = sol_make_shared<R>();
+			m_writer = sol_make_shared<W>();
 		}
 		
 		StorageReaderSPtr reader() const noexcept { return m_reader; }

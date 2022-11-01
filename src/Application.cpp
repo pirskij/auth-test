@@ -1,6 +1,7 @@
 #include "Application.h"
 #include "ui/AuthWindow.h"
 #include "ui/UIManager.h"
+#include "utils/Memory.h"
 #include "lv_cpp/core/lvglpp.h"
 #if _WIN32
 #include <Windows.h>
@@ -9,6 +10,7 @@
 #include <assert.h> 
 
 using namespace sol;
+using namespace sol::utils;
 
 ApplicationSPtr Application::createUnique()
 {
@@ -25,7 +27,7 @@ bool Application::init(int arg)
     lvglpp::Init();
     lvglpp::DefaultPeripheral(arg);
 
-    m_uiManager = std::make_unique<ui::UIManager>();
+    m_uiManager = sol_make_shared<ui::UIManager>();
 
     if (!m_uiManager || !m_uiManager->init())
     {

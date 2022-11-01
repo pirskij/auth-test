@@ -4,6 +4,7 @@
 #include <map>
 #include <memory>
 #include <string>
+#include "utils/Memory.h"
 
 namespace sol::utils
 {
@@ -27,7 +28,9 @@ namespace sol::utils
 	struct SmartCreator<T, Base, Pointer, typename std::enable_if<std::is_same<Pointer, std::shared_ptr<Base>>::value>::type>
 	{
 		//template<typename T, typename Pointer>
-		Pointer operator()() { return std::make_shared<T>(); };
+		Pointer operator()() { 
+			return sol_make_shared<T>();
+		};
 	};
 	
 	template<typename T, typename Pointer, typename TKEY = std::string>
