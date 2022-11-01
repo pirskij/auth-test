@@ -10,7 +10,14 @@ bool BackendValidator::validate(std::string_view name, std::string_view pass, On
 
 bool LocalValidator::validate(std::string_view name, std::string_view pass, OnValidatedClb const& clb)
 {
-	/// TODO: implement local 
+	if (clb)
+	{
+		std::string raw = "{\"name\"=\"";
+		raw += name;
+		raw += "\",\"token\"=\"test token\"}";
+
+		clb(true, raw);
+	}
 
 	return true;
 }

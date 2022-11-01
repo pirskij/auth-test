@@ -39,6 +39,8 @@ bool Application::init(int arg)
     if (!wnd)
         return false;
 
+    std::cout << "Application created !!!\n";
+
     return true;
 }
 

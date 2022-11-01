@@ -6,7 +6,7 @@
 
 namespace sol::auth
 {
-	using OnValidatedClb = std::function<void(bool)>;
+	using OnValidatedClb = std::function<void(bool,std::string)>;
 
 	class Validator
 	{

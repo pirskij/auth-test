@@ -10,7 +10,7 @@ namespace sol::auth
 	class Authorizer
 	{
 	public:
-		Authorizer() = default;
+		Authorizer();
 		
 		AccessTokenSPtr autorize(std::string_view name, std::string_view pass);
 

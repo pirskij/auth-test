@@ -1,13 +1,15 @@
 #include "AuthWindow.h"
-
-#include <iostream>
-
+#include "auth/Authorizer.h"
+#include "lv_cpp/core/lvglpp.h"
 #include "lv_cpp/core/LvDisplay.h"
 #include "lv_cpp/core/LvIndev.h"
+#include "lv_cpp/core/LvObj.h"
 #include "lv_cpp/core/LvScr.h"
+#include "lv_cpp/misc/LvStyle.h"
 #include "lv_cpp/misc/LvTimer.h"
 #include "lv_cpp/misc/LvAnim.h"
 #include "lv_cpp/misc/LvAnimTimeline.h"
+#include "lv_cpp/widgets/LvWidgets.h"
 #include "utils/Memory.h"
 
 using namespace lvglpp;
@@ -15,44 +17,18 @@ using namespace sol::utils;
 
 namespace sol::ui
 {
-	/* Widgets */
-	LvPointerUnique<LvLabel> label;
+	void internal_onAuthClicked(lv_event_t* e)
+	{
+		if (!e || !e->user_data)
+			return;
 
-	/* Globals */
-	static int pressed = 0;
+		auto wnd = reinterpret_cast<AuthWindow*>(e->user_data);
+		if (!wnd)
+			return;
 
-	/* Callback for button pressed */
-	void ButtonPressedAdd(lv_event_t* e) {
-		pressed++;
-		label->setTextFmt("%d", pressed);
+		wnd->_onAuthClicked();
 	}
-
-	/* Callback for button pressed */
-	void ButtonPressedSub(lv_event_t* e) {
-		if (pressed > 0)
-			pressed--;
-		label->setTextFmt("%d", pressed);
-	}
-
-
-	/* Callback for Timer pressed */
-	static void TimerCb(lv_timer_t* timer) {
-		pressed++;
-		label->setTextFmt("%d", pressed);
-	}
-
-	/* Callback for Animation pressed */
-	static void zoominCb(void* var, int32_t v) {
-		LvBtn* _btn = static_cast<LvBtn*>(var);
-		_btn->setSize(v, static_cast<lv_coord_t>(v * 0.5f));
-	}
-
-	/* Callback for Animation pressed */
-	static void getoutCb(void* var, int32_t v) {
-		LvBtn* _btn = static_cast<LvBtn*>(var);
-		_btn->setX(v);
-	}
-} // namespace sol::ui
+};
 
 using namespace sol::ui;
 
@@ -96,9 +72,37 @@ bool AuthWindow::init()
 	m_authBtn->setHeight(LV_SIZE_CONTENT);
 	m_authBtn->setWidth(150);
 
+	m_authBtn->addEventCb(internal_onAuthClicked, LV_EVENT_PRESSED, this);
+
 	m_authBtnLabel = sol_make_shared<LvLabel>(m_authBtn.get());
 	m_authBtnLabel->setText("Auth").align(LV_ALIGN_CENTER, 0, 0);
 
-	std::cout << "Application created !!!\n";
+	m_descrLabel = sol_make_shared<LvLabel>(m_mainLayout.get());
+	m_descrLabel->setText("Please Authorize!").addStyle(m_labelsStyle.get(), 0);
+
 	return true;
+}
+
+void AuthWindow::_onAuthClicked()
+{
+	if (!m_nameTextArea || !m_passTextArea)
+		return;
+
+	std::string name = m_nameTextArea->getText();
+	std::string pass = m_passTextArea->getText();
+
+	if (name.empty() || pass.empty())
+	{
+		m_descrLabel->setText("Authorization FAILED!!!!");
+		return;
+	}
+
+	if (!m_authCntrl)
+		m_authCntrl = sol_make_shared<auth::Authorizer>();
+
+	auto token = m_authCntrl->autorize(name, pass);
+	if (token)
+		m_descrLabel->setText("Authorization SUCCESS!!!!");
+	else
+		m_descrLabel->setText("Authorization FAILED!!!!");
 }

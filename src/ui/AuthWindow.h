@@ -1,10 +1,7 @@
 #pragma once
 
+#include "auth/ForwardDeclare.h"
 #include "ui/Window.h"
-#include "lv_cpp/core/lvglpp.h"
-#include "lv_cpp/core/LvObj.h"
-#include "lv_cpp/misc/LvStyle.h"
-#include "lv_cpp/widgets/LvWidgets.h"
 #include <string>
 
 namespace sol::ui 
@@ -16,6 +13,8 @@ namespace sol::ui
 
         virtual bool init() override;
 
+        void _onAuthClicked();
+
     private:
         lvglpp::LvObjSPtr      m_mainLayout;
         lvglpp::LvStyleSPtr    m_labelsStyle;
@@ -25,5 +24,8 @@ namespace sol::ui
         lvglpp::LvTextareaSPtr m_passTextArea;
         lvglpp::LvBtnSPtr      m_authBtn;
         lvglpp::LvLabelSPtr    m_authBtnLabel;
+        lvglpp::LvLabelSPtr    m_descrLabel;
+
+        auth::AuthorizerSPtr   m_authCntrl;
     };
 }
