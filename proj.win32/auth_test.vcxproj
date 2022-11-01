@@ -186,10 +186,15 @@
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvTextarea.cpp" />
     <ClCompile Include="..\3rdparty\lv_cpp\widgets\LvWin.cpp" />
     <ClCompile Include="..\src\Application.cpp" />
+    <ClCompile Include="..\src\auth\AccessToken.cpp" />
+    <ClCompile Include="..\src\auth\Authorizer.cpp" />
+    <ClCompile Include="..\src\auth\Validator.cpp" />
     <ClCompile Include="..\src\ui\AuthWindow.cpp" />
     <ClCompile Include="..\src\ui\UIManager.cpp" />
     <ClCompile Include="..\src\ui\Window.cpp" />
     <ClCompile Include="..\src\ui\WindowsFactory.cpp" />
+    <ClCompile Include="..\src\utils\Cache.cpp" />
+    <ClCompile Include="..\src\utils\Storage.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +240,10 @@
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWidgets.h" />
     <ClInclude Include="..\3rdparty\lv_cpp\widgets\LvWin.h" />
     <ClInclude Include="..\src\Application.h" />
+    <ClInclude Include="..\src\auth\AccessToken.h" />
+    <ClInclude Include="..\src\auth\Authorizer.h" />
+    <ClInclude Include="..\src\auth\ForwardDeclare.h" />
+    <ClInclude Include="..\src\auth\Validator.h" />
     <ClInclude Include="..\src\ForwardDeclare.h" />
     <ClInclude Include="..\src\macro.h" />
     <ClInclude Include="..\src\ui\AuthWindow.h" />
@@ -243,7 +252,10 @@
     <ClInclude Include="..\src\ui\Window.h" />
     <ClInclude Include="..\src\ui\WindowsFactory.h" />
     <ClInclude Include="..\src\utils\AbstractFactory.h" />
+    <ClInclude Include="..\src\utils\Cache.h" />
+    <ClInclude Include="..\src\utils\ForwardDeclare.h" />
     <ClInclude Include="..\src\utils\Singleton.h" />
+    <ClInclude Include="..\src\utils\Storage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

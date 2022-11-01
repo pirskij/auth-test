@@ -171,6 +171,21 @@
     <ClCompile Include="..\src\Application.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\auth\AccessToken.cpp">
+      <Filter>src\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\auth\Authorizer.cpp">
+      <Filter>src\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\auth\Validator.cpp">
+      <Filter>src\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\Cache.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\Storage.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\3rdparty\lv_cpp\core\LvDisplay.h">
@@ -325,6 +340,27 @@
     </ClInclude>
     <ClInclude Include="..\src\ForwardDeclare.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auth\AccessToken.h">
+      <Filter>src\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auth\Authorizer.h">
+      <Filter>src\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auth\ForwardDeclare.h">
+      <Filter>src\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auth\Validator.h">
+      <Filter>src\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\Cache.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\ForwardDeclare.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\Storage.h">
+      <Filter>src\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
